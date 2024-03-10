@@ -35,3 +35,12 @@
     border: 1px solid black;
     margin: 1vh;
 }
+
+.pop-up-form{
+    position: absolute;
+    transform: translate(-400px);
+}
+
+.hidden{
+    display: none;
+}
