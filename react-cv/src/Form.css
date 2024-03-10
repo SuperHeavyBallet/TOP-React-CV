@@ -1,0 +1,37 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 2vw;
+}
+
+.form-container div{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.form-container input{
+    border: 1px solid black;
+    padding: 0.5vh;
+    height: 80%;
+}
+.form-container button{
+    line-height: 50%;
+    font-size: small;
+    height: 3vh;
+    margin: 2vh 0.5vw;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid black;
+}
+
+.details-display{
+    border: 1px solid black;
+    margin: 1vh;
+}
