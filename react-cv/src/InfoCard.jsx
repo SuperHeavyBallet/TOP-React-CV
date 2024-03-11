@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Input from "./Input";
-import "./BoxOutline.css";
+
 
 
 
@@ -49,8 +49,7 @@ export default function InfoCard()
         <div >
         { isFormVisible && (
         <div id="information-form" className="box-outline pop-up-form">
-            <form onSubmit={handleSubmit}
-            >
+            <form onSubmit={handleSubmit}>
             <button 
                 type="button"
                 onClick={handleCloseBox}>Close</button>
