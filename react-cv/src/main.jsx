@@ -9,6 +9,7 @@ import InfoCard from './InfoCard.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <InfoCard/>
+    <InfoCard/>
 
   </React.StrictMode>,
 )

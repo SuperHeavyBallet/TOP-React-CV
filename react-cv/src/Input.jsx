@@ -28,7 +28,7 @@ export default function Input( { onInputChange })
                 value={input}
                 >
             </input>
-            <button
+            <button type="button"
             onClick={handleClearButtonClick}
             >
                 Clear
