@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react"
 
 
-export default function Input( { value, onInputChange })
+export default function TextAreaInput( { value, onInputChange })
 {
 
     const [ input, setInput ] = useState(value);
@@ -26,13 +26,12 @@ export default function Input( { value, onInputChange })
     return (
 
         <div>
-            <input 
+            <textarea
                 onChange={handleInputChange}
-                type="text"
                 placeholder="Input..."
                 value={input}
                 >
-            </input>
+            </textarea>
             <button type="button"
             onClick={handleClearButtonClick}
             >

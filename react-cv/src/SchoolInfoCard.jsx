@@ -1,17 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import Input from "./Input";
+import DateInput from "./DateInput";
 
 
 export default function SchoolInfoCard()
 {
     const [ schoolName, setSchoolName ] = useState("");
     const [ titleOfStudy, setTitleOfStudy ] = useState("");
-    const [ dateOfStudy, setDateOfStudy ] = useState("");
+    const [ dateOfStudyStart, setDateOfStudyStart ] = useState("");
+    const [ dateOfStudyEnd, setDateOfStudyEnd ] = useState("");
 
     const [ displaySchoolName, setDisplaySchoolName ] = useState("");
     const [ displayTitleOfStudy, setDisplayTitleOfStudy ] = useState("");
-    const [ displayDateOfStudy, setDisplayDateOfStudy ] = useState("");
+    const [ displayDateOfStudyStart, setDisplayDateOfStudyStart ] = useState("");
+    const [ displayDateOfStudyEnd, setDisplayDateOfStudyEnd ] = useState("");
 
     const [ isFormVisible, setIsFormVisible ] = useState(false);
 
@@ -22,7 +25,8 @@ export default function SchoolInfoCard()
         event.preventDefault();
         setDisplaySchoolName(schoolName);
         setDisplayTitleOfStudy(titleOfStudy);
-        setDisplayDateOfStudy(dateOfStudy);
+        setDisplayDateOfStudyStart(dateOfStudyStart);
+        setDisplayDateOfStudyEnd(dateOfStudyEnd);
         setIsFormVisible(false);
         
 
@@ -36,8 +40,15 @@ export default function SchoolInfoCard()
 
     function handleEditClick()
     {
+        if (!isFormVisible)
+        {
+            setIsFormVisible(true);
+        }
+        else
+        {
+            setIsFormVisible(false);
+        }
         
-        setIsFormVisible(true);
 
     }
 
@@ -51,9 +62,10 @@ export default function SchoolInfoCard()
                             type="button"
                             onClick={handleCloseBox}>X
                         </button>
-                    <div>School Name< Input onInputChange={setSchoolName}/> </div>
-                    <div>Title of Study< Input onInputChange={setTitleOfStudy}/> </div>
-                    <div>Date of Study< Input onInputChange={setDateOfStudy}/> </div>
+                    <div>School Name< Input value={schoolName} onInputChange={setSchoolName}/> </div>
+                    <div>Title of Study< Input value={titleOfStudy} onInputChange={setTitleOfStudy}/> </div>
+                    <div>Started< DateInput value={dateOfStudyStart} onInputChange={setDateOfStudyStart} /> </div>
+                    <div>Finished< DateInput value={dateOfStudyEnd} onInputChange={setDateOfStudyEnd}/> </div>
                     <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -61,10 +73,11 @@ export default function SchoolInfoCard()
 
         <div className="box-outline">
             <div >
-                <h3>Collected Info</h3>
+                <h3>Education</h3>
                 <p>School Name: {displaySchoolName}</p>
                 <p>Title of Study: {displayTitleOfStudy}</p>
-                <p>Date of Study: {displayDateOfStudy}</p>
+                <p>Started: {displayDateOfStudyStart}</p>
+                <p>Finished: {displayDateOfStudyEnd}</p>
             </div>
 
             <div>

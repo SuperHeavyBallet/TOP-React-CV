@@ -24,6 +24,9 @@ export default function AddNewCard()
     {
         setCards(cards.filter(card => card.id !== id));
     }
+
+    
+
     return (
         <div>
             {cards.map(card => (

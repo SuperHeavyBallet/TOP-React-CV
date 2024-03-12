@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import Input from "./Input";
+import DateInput from "./DateInput";
+import TextAreaInput from "./TextAreaInput";
 
 export default function CompanyInfoCard({ removeCard })
 {
@@ -9,10 +11,18 @@ export default function CompanyInfoCard({ removeCard })
     const [ responsibilities, setResponsibilities ] = useState("");
     const [ dateOfEmployment, setDateOfEmployment ] = useState("");
 
+    const [ dateOfEmploymentStart, setDateOfEmploymentStart ] = useState("");
+    const [ dateOfEmploymentEnd, setDateOfEmploymentEnd ] = useState("");
+
     const [ displayCompanyName, setDisplayCompanyName ] = useState("");
     const [ displayPositionTitle, setDisplayPositionTitle ] = useState("");
     const [ displayResponsibilities, setDisplayResponsibilities ] = useState("");
     const [ displayDateOfEmployment, setDisplayDateOfEmployment ] = useState("");
+
+    const [ displayDateOfEmploymentStart, setDisplayDateOfEmploymentStart] = useState("");
+    const [ displayDateOfEmploymentEnd, setDisplayDateOfEmploymentEnd ] = useState("");
+
+
 
     const [ isFormVisible, setIsFormVisible ] = useState(false);
 
@@ -22,7 +32,8 @@ export default function CompanyInfoCard({ removeCard })
         setDisplayCompanyName(companyName);
         setDisplayPositionTitle([positionTitle]);
         setDisplayResponsibilities(responsibilities);
-        setDisplayDateOfEmployment(dateOfEmployment);
+        setDisplayDateOfEmploymentStart(dateOfEmploymentStart);
+        setDisplayDateOfEmploymentEnd(dateOfEmploymentEnd)
         setIsFormVisible(false);
     }
 
@@ -33,13 +44,17 @@ export default function CompanyInfoCard({ removeCard })
 
     function handleEditClick()
     {
-        setIsFormVisible(true);
+        if (!isFormVisible)
+        {
+            setIsFormVisible(true);
+        }
+        else
+        {
+            setIsFormVisible(false);
+        }
     }
 
-    function handleRemoveCard()
-    {
 
-    }
 
     return (
         <div>
@@ -50,10 +65,15 @@ export default function CompanyInfoCard({ removeCard })
                         type="button"
                         onClick={handleCloseBox}>X
                     </button>
-                    <div>Company Name <Input onInputChange={setCompanyName}/> </div>
-                    <div>Position Title <Input onInputChange={setPositionTitle}/> </div>
-                    <div>Responsibilities <Input onInputChange={setResponsibilities}/> </div>
-                    <div>Date of Employment <Input onInputChange={setDateOfEmployment}/> </div>
+                    <div>Company Name <Input value={companyName} onInputChange={setCompanyName}/> </div>
+                    <div>Position Title <Input value={positionTitle} onInputChange={setPositionTitle}/> </div>
+                    <div>Responsibilities <TextAreaInput value={responsibilities} onInputChange={setResponsibilities}/> </div>
+                    
+                    
+                    
+                    <div>Started < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} /></div>
+                    <div>Ended < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} /></div>
+
                     <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -65,7 +85,8 @@ export default function CompanyInfoCard({ removeCard })
                     <p>Company Name: {displayCompanyName}</p>
                     <p>Position Title: {displayPositionTitle}</p>
                     <p>Responsibilities: {displayResponsibilities}</p>
-                    <p>Date of Employment: {displayDateOfEmployment}</p>
+                    <p>Started: {displayDateOfEmploymentStart}</p>
+                    <p>Ended: {displayDateOfEmploymentEnd}</p>
                 </div>
 
                 <div>

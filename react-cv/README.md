@@ -11,18 +11,22 @@ Currently, two official plugins are available:
 
 - Adjust CSS to look nicer
 - Collect CSS to single page
+- In Education info + Work Experience - change Started to be smaller than Finished
 
-- Maintain input value in edit input fields
-- Adjust phone input to phone form
-- create first/last for name input
-- process first/last to full name on display
-- adjust email input to email form
+- ``Maintain input value in edit input fields``
+- ``Adjust phone input to phone form``
+- ``create first/last for name input``
+- ``process first/last to full name on display``
+- ``adjust email input to email form``
 
-- adjust date of study to date started + date ended
+- ``adjust date of study to date started + date ended``
 
-- adjust Responsibilities to text field, not single line
-- adjust date of Employment to date started + date ended
+- ``!!adjust Responsibilities to text box, not single line!!`` - Possible issue with display version being single line, not text area - may be a CSS issue
+- ``adjust date of Employment to date started + date ended``
 
+- Change some Field Names (Eg Name:, Email:) to be an svg icon 
+- Only Allow one edit box open at once, opening one closes the others
+- ``Allow clicking Edit Info to open/close the edit pop up box``
 
 
 

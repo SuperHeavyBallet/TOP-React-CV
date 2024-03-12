@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react"
 
 
-export default function Input( { value, onInputChange })
+export default function EmailInput( { value, onInputChange })
 {
 
     const [ input, setInput ] = useState(value);
@@ -28,7 +28,7 @@ export default function Input( { value, onInputChange })
         <div>
             <input 
                 onChange={handleInputChange}
-                type="text"
+                type="email"
                 placeholder="Input..."
                 value={input}
                 >
