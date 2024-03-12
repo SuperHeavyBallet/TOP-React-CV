@@ -48,7 +48,7 @@ export default function CompanyInfoCard({ removeCard })
                 <form onSubmit={handleSubmit}>
                     <button
                         type="button"
-                        onClick={handleCloseBox}>Close
+                        onClick={handleCloseBox}>X
                     </button>
                     <div>Company Name <Input onInputChange={setCompanyName}/> </div>
                     <div>Position Title <Input onInputChange={setPositionTitle}/> </div>
@@ -59,8 +59,9 @@ export default function CompanyInfoCard({ removeCard })
                 </div>
             )}
 
-                <div className="box-outline">
-                    <h3>Collected Info</h3>
+            <div className="box-outline">
+                <div >
+                    <h3>Work Experience</h3>
                     <p>Company Name: {displayCompanyName}</p>
                     <p>Position Title: {displayPositionTitle}</p>
                     <p>Responsibilities: {displayResponsibilities}</p>
@@ -71,7 +72,7 @@ export default function CompanyInfoCard({ removeCard })
                     <button onClick={handleEditClick} type="button">Edit Info</button>
                     <button onClick={removeCard} type="button">Remove</button>
                 </div>
-
+            </div>
         </div>
     )
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CompanyInfoCard from "./CompanyInfoCard";
+import CompanyInfoCard from "./WorkExperienceCard";
 
 export default function AddNewCard()
 {

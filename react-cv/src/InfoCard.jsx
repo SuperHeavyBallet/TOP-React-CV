@@ -52,7 +52,7 @@ export default function InfoCard()
             <form onSubmit={handleSubmit}>
             <button 
                 type="button"
-                onClick={handleCloseBox}>Close</button>
+                onClick={handleCloseBox}>X</button>
             <div>Name <Input onInputChange={setName}/> </div>
             <div>Email <Input onInputChange={setEmail}/> </div>
             <div>Phone <Input onInputChange={setPhone}/> </div>
@@ -62,8 +62,9 @@ export default function InfoCard()
         )}
 
         
-            <div className="box-outline">
-                <h3>Collected Info:</h3>
+        <div className="box-outline">
+            <div>
+                <h3>Personal Info:</h3>
                 <p>Name: {displayName}</p>
                 <p>Email: {displayEmail}</p>
                 <p>Phone: {displayPhone}</p>
@@ -72,6 +73,8 @@ export default function InfoCard()
             <div>
                 <button onClick={handleEditClick}>Edit Info</button>
             </div>
+            </div>
+
 
         </div>
     )

@@ -1,23 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import PersonalData from './PersonalData.jsx'
-import UserInfo from './UserInfo.jsx'
+import './css/index.css'
+import './css/App.css'
 import InfoCard from './InfoCard.jsx'
 import SchoolInfoCard from './SchoolInfoCard.jsx'
-import CompanyInfoCard from './CompanyInfoCard.jsx'
-import "./BoxOutline.css";
-import './Form.css'
-import AddNewCard from './AddNewCard.jsx'
+import CompanyInfoCard from './WorkExperienceCard.jsx'
+import "./css/BoxOutline.css";
+import './css/Form.css'
+import AddNewCard from './AddWorkExperienceCard.jsx'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <InfoCard/>
+    <InfoCard />
 
     <SchoolInfoCard/>
+
+   
     <AddNewCard/>
+
+    
     
 
   </React.StrictMode>,

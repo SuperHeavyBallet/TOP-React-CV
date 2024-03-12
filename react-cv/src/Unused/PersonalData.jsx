@@ -4,7 +4,7 @@ import './Form.css'
 
 
 
-
+/*
 export default function PersonalData()
 {
     const [ firstName, setFirstName ] = useState("");
@@ -141,4 +141,4 @@ export default function PersonalData()
             <button onClick={handleHideInput("show")}>Edit Info</button>
         </div>
     )
-}
+}*/

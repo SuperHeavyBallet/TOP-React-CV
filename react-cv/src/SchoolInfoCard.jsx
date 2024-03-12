@@ -49,7 +49,7 @@ export default function SchoolInfoCard()
                     <form onSubmit={handleSubmit}>
                         <button
                             type="button"
-                            onClick={handleCloseBox}>Close
+                            onClick={handleCloseBox}>X
                         </button>
                     <div>School Name< Input onInputChange={setSchoolName}/> </div>
                     <div>Title of Study< Input onInputChange={setTitleOfStudy}/> </div>
@@ -59,7 +59,8 @@ export default function SchoolInfoCard()
                 </div>
             )}
 
-            <div className="box-outline">
+        <div className="box-outline">
+            <div >
                 <h3>Collected Info</h3>
                 <p>School Name: {displaySchoolName}</p>
                 <p>Title of Study: {displayTitleOfStudy}</p>
@@ -69,6 +70,8 @@ export default function SchoolInfoCard()
             <div>
                 <button onClick={handleEditClick}>Edit Info</button>
             </div>
+        </div>
+
         </div>
     )
 

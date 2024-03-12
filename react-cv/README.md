@@ -7,6 +7,25 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+//TODO
+
+- Adjust CSS to look nicer
+- Collect CSS to single page
+
+- Maintain input value in edit input fields
+- Adjust phone input to phone form
+- create first/last for name input
+- process first/last to full name on display
+- adjust email input to email form
+
+- adjust date of study to date started + date ended
+
+- adjust Responsibilities to text field, not single line
+- adjust date of Employment to date started + date ended
+
+
+
+
 
 /// TOP STUFF
 
