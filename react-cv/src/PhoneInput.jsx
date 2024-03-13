@@ -48,7 +48,10 @@ export default function PhoneInput( { value, onInputChange, placeHolder })
             placeholder={placeHolder || "Input..."}
             value={input}></input>
         
-        <button type="button" onClick={handleClearButtonClick}>
+        <button 
+        type="button"
+        className="clear-button" 
+        onClick={handleClearButtonClick}>
             Clear
         </button>
 

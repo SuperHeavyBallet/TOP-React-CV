@@ -14,13 +14,13 @@ export default function CompanyInfoCard({ removeCard })
     const [ dateOfEmploymentStart, setDateOfEmploymentStart ] = useState("");
     const [ dateOfEmploymentEnd, setDateOfEmploymentEnd ] = useState("");
 
-    const [ displayCompanyName, setDisplayCompanyName ] = useState("");
-    const [ displayPositionTitle, setDisplayPositionTitle ] = useState("");
-    const [ displayResponsibilities, setDisplayResponsibilities ] = useState("");
+    const [ displayCompanyName, setDisplayCompanyName ] = useState("Company Name...");
+    const [ displayPositionTitle, setDisplayPositionTitle ] = useState("Position Title...");
+    const [ displayResponsibilities, setDisplayResponsibilities ] = useState("Responsibilities...");
     const [ displayDateOfEmployment, setDisplayDateOfEmployment ] = useState("");
 
-    const [ displayDateOfEmploymentStart, setDisplayDateOfEmploymentStart] = useState("");
-    const [ displayDateOfEmploymentEnd, setDisplayDateOfEmploymentEnd ] = useState("");
+    const [ displayDateOfEmploymentStart, setDisplayDateOfEmploymentStart] = useState("Started...");
+    const [ displayDateOfEmploymentEnd, setDisplayDateOfEmploymentEnd ] = useState("Ended...");
 
 
 
@@ -59,39 +59,101 @@ export default function CompanyInfoCard({ removeCard })
     return (
         <div>
             {isFormVisible && (
-                <div id="information-form" className="box-outline pop-up-form">
-                <form onSubmit={handleSubmit}>
+                <div className="pop-up-form">
+                    
+                <form className="edit-form" onSubmit={handleSubmit}>
+
+                <div className="edit-form-top-bar">
+                    <h3>Edit Work Experience</h3>
+                    <div className="close-button-container">
                     <button
+                        className="close-button"
                         type="button"
                         onClick={handleCloseBox}>X
                     </button>
-                    <div>Company Name <Input value={companyName} onInputChange={setCompanyName}/> </div>
-                    <div>Position Title <Input value={positionTitle} onInputChange={setPositionTitle}/> </div>
-                    <div>Responsibilities <TextAreaInput value={responsibilities} onInputChange={setResponsibilities}/> </div>
-                    
-                    
-                    
-                    <div>Started < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} /></div>
-                    <div>Ended < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} /></div>
+                    </div>
+                </div>
 
-                    <button type="submit">Submit</button>
+                <div className="card-data">
+
+                <div className="edit-header">Company Name </div>
+                    <div className="edit-data-line">
+                        <Input value={companyName} onInputChange={setCompanyName}/> 
+                    </div>
+
+                <div className="edit-header">Position Title </div>
+                    <div className="edit-data-line">  
+                        <Input value={positionTitle} onInputChange={setPositionTitle}/> 
+                    </div>
+                    
+                <div className="edit-header">Responsibilities </div>
+                    <div className="edit-data-line">      
+                        <Input value={responsibilities} onInputChange={setResponsibilities}/> 
+                    </div>
+                    
+                <div className="edit-header">Started </div>
+                    <div className="edit-data-line">  
+                        < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} />
+                    </div>
+
+                <div className="edit-header">Ended </div>
+                    <div className="edit-data-line"> 
+                        < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} />
+                    </div>
+                    
+                </div>
+
+                    <div className="submit-button-container">
+                        <button className="submit-button" type="submit">Submit</button>
+                    </div>
+
                     </form>
                 </div>
             )}
 
-            <div className="box-outline">
-                <div >
-                    <h3>Work Experience</h3>
-                    <p>Company Name: {displayCompanyName}</p>
-                    <p>Position Title: {displayPositionTitle}</p>
-                    <p>Responsibilities: {displayResponsibilities}</p>
-                    <p>Started: {displayDateOfEmploymentStart}</p>
-                    <p>Ended: {displayDateOfEmploymentEnd}</p>
+            <div className="info-card">
+            <div className="card-data-title-background"><h3>Work Experience</h3></div>
+                <div className="card-data">
+                <div className="data-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#000"><path d="M10 11c-5.92 0-8 3-8 5v3h16v-3c0-2-2.08-5-8-5z"/><circle cx="10" cy="5.5" r="4.5"/></g>
+                    </svg>
+                    <p>{displayCompanyName}</p>
                 </div>
 
-                <div>
-                    <button onClick={handleEditClick} type="button">Edit Info</button>
-                    <button onClick={removeCard} type="button">Remove</button>
+                <div className="data-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#000"><path d="M10 11c-5.92 0-8 3-8 5v3h16v-3c0-2-2.08-5-8-5z"/><circle cx="10" cy="5.5" r="4.5"/></g>
+                    </svg>
+                    <p>{displayPositionTitle}</p>
+                </div>
+
+                <div className="data-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#000"><path d="M10 11c-5.92 0-8 3-8 5v3h16v-3c0-2-2.08-5-8-5z"/><circle cx="10" cy="5.5" r="4.5"/></g>
+                    </svg>
+                    <p>{displayResponsibilities}</p>
+                </div>
+
+                <div className="data-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#000"><path d="M10 11c-5.92 0-8 3-8 5v3h16v-3c0-2-2.08-5-8-5z"/><circle cx="10" cy="5.5" r="4.5"/></g>
+                    </svg>
+                    <p>{displayDateOfEmploymentStart}</p>
+                </div>
+
+                <div className="data-line">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#000"><path d="M10 11c-5.92 0-8 3-8 5v3h16v-3c0-2-2.08-5-8-5z"/><circle cx="10" cy="5.5" r="4.5"/></g>
+                    </svg>
+                    <p>{displayDateOfEmploymentEnd}</p>
+                </div>
+
+                </div>
+
+                <div  className="edit-button-container">
+                    <button className="edit-button" onClick={handleEditClick} type="button">Edit</button>
+                    <button className="remove-button" onClick={removeCard} type="button">Remove</button>
                 </div>
             </div>
         </div>

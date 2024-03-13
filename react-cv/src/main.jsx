@@ -8,6 +8,7 @@ import CompanyInfoCard from './WorkExperienceCard.jsx'
 import "./css/BoxOutline.css";
 import './css/Form.css'
 import AddNewCard from './AddWorkExperienceCard.jsx'
+import AddNewEducationCard from './AddEducationCard.jsx'
 
 
 
@@ -15,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <InfoCard />
 
-    <SchoolInfoCard/>
+    <AddNewEducationCard/>
 
    
     <AddNewCard/>

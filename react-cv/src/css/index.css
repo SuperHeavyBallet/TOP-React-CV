@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --dark-blue: rgb(42, 48, 87); 
 }
 
 a {
@@ -28,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: gray;
 }
 
 h1 {
@@ -51,7 +54,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto rgb(255, 174, 0);
 }
 
 @media (prefers-color-scheme: light) {
@@ -66,7 +69,201 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.form{
+
+/* Info Card */
+
+.info-card
+{
+  background-color: whitesmoke;
+  margin: 1vh 1vw;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 5px;
+  
+}
+
+.card-data{
+
+  text-align: start;
+  padding: 1vh 2vw;
+}
+
+.card-data-title-background{
+  background-color: var(--dark-blue);
+  border-radius: 5px 5px 0 0;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.card-data-title-background h3{
+  margin: 0;
+  padding: 1vh;
+}
+
+.data-line{
+  margin: 0.7em 0.5em;
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  line-height: 50%;
+}
+.card-data p{
+  margin: 0.5em;
+  padding: 0;
+}
+
+.edit-button-container
+{
+  
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.edit-button
+{
+  border-radius: 3px 0 5px 0;
+  padding: 0.3em 0.5em;
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.edit-button:hover{
+  background-color: rgb(92, 218, 190);
+  color: var(--dark-blue);
+}
+
+.remove-button{
+  border-radius: 0 3px 0 5px;
+  padding: 0.3em 0.5em;
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.remove-button:hover{
+  background-color: crimson;
+  color: whitesmoke;
+}
+
+/*Pop Up Edit Box*/
+
+.pop-up-form{
+  position: absolute;
+  transform: translate(-300px);
+
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  margin: 1vh 1vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+}
+
+.edit-form{
+  text-align: start;
+}
+
+.edit-header{
+  margin: 0;
+  padding: 0;
+}
+
+.edit-data-line{
+  margin: 0em 0.5em 0.8em 0.5em;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  
+}
+
+input{
+  border: 0px;
+  padding: 0.5vh 0.5em;
+}
+
+.submit-button-container{
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.submit-button{
+  border-radius: 3px 0 5px 0;
+  padding: 0.3em 0.5em;
+  background-color: whitesmoke;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.submit-button:hover{
+  background-color: rgb(92, 218, 190);
+}
+
+.edit-form-top-bar{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: whitesmoke;
+  color: var(--dark-blue);
+  justify-content: space-between;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.edit-form-top-bar h3{
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+.close-button-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.close-button{
+  padding: 0;
+  border-radius: 5px 0 0 0;
+  padding: 0 0.5em ;
+  background-color: whitesmoke;
+  color: crimson;
+  font-weight: bold;
+}
+
+.close-button:hover{
+  background-color: crimson;
+  color: whitesmoke;
+}
+
+.hidden{
+  display: none;
+}
+
+.clear-button{
+  border-radius: 0;
+  padding: 0.3vh 0.5em;
+  margin: 0.8em 0.8em;
+  background-color: whitesmoke;
+  color: crimson;
+  font-weight: bold;
+  font-size: small;
+}
+
+.clear-button:hover{
+  background-color: crimson;
+  color: whitesmoke;
+ 
+}
+
+
+.add-new-card-button{
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  font-weight: bold;
+  margin: 1vh;
+}
+
+.add-new-card-button:hover{
+  background-color: rgb(92, 218, 190);
+  color: var(--dark-blue);
 }

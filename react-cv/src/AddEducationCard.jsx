@@ -1,48 +1,43 @@
 import React from "react";
 import { useState } from "react";
 import CompanyInfoCard from "./WorkExperienceCard";
+import SchoolInfoCard from "./SchoolInfoCard";
 
-export default function AddNewCard()
+export default function AddNewEducationCard()
 {
     const [ cards, setCards ] = useState([]);
-
-    const [ nextID, setNextID ] = useState(0);
-
+    const [ nextID, setNextID ] = useState([]);
 
     function handleAddNewClick()
     {
         const newCardData = {
             id: nextID,
-        }
-        //const newCard = <CompanyInfoCard key={cards.length} />;
+        };
+
         setCards(prevCards => [...prevCards, newCardData]);
         setNextID(nextID + 1);
-
     }
 
-    function handleRemoveCard( id)
+    function handleRemoveCard(id)
     {
         setCards(cards.filter(card => card.id !== id));
     }
 
-    
-
     return (
         <div>
             {cards.map(card => (
-                <CompanyInfoCard
-                key={card.id}
-                removeCard={() => handleRemoveCard(card.id)}
+                <SchoolInfoCard
+                    key={card.id}
+                    removeCard={() => handleRemoveCard(card.id)}
                 />
             ))}
-        <button 
+
+            <button
             className="add-new-card-button"
             type="button"
-            onClick={handleAddNewClick}
-            
-            >Add Work Experience</button>
-            
-            </div>
-        )   
-
+            onClick={handleAddNewClick}>
+                Add Education
+            </button>
+        </div>
+    )
 }

@@ -33,7 +33,9 @@ export default function EmailInput( { value, onInputChange })
                 value={input}
                 >
             </input>
-            <button type="button"
+            <button 
+            className="clear-button" 
+            type="button"
             onClick={handleClearButtonClick}
             >
                 Clear

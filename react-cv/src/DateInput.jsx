@@ -35,7 +35,10 @@ export default function DateInput( { value, onInputChange, placeHolder })
             placeholder={placeHolder || "Input..."}
             value={date}></input>
         
-        <button type="button" onClick={handleClearButtonClick}>
+        <button 
+        className="clear-button"
+        type="button" 
+        onClick={handleClearButtonClick}>
             Clear
         </button>
 

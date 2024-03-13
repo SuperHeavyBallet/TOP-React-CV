@@ -32,7 +32,7 @@ export default function TextAreaInput( { value, onInputChange })
                 value={input}
                 >
             </textarea>
-            <button type="button"
+            <button className="clear-button" type="button"
             onClick={handleClearButtonClick}
             >
                 Clear

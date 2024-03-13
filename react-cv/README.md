@@ -9,10 +9,14 @@ Currently, two official plugins are available:
 
 //TODO
 
+// Visual Stuff
 - Adjust CSS to look nicer
 - Collect CSS to single page
 - In Education info + Work Experience - change Started to be smaller than Finished
+- Change some Field Names (Eg Name:, Email:) to be an svg icon 
+- Correct Edit > Clear buttons
 
+// Functional Stuff
 - ``Maintain input value in edit input fields``
 - ``Adjust phone input to phone form``
 - ``create first/last for name input``
@@ -24,9 +28,19 @@ Currently, two official plugins are available:
 - ``!!adjust Responsibilities to text box, not single line!!`` - Possible issue with display version being single line, not text area - may be a CSS issue
 - ``adjust date of Employment to date started + date ended``
 
-- Change some Field Names (Eg Name:, Email:) to be an svg icon 
+
 - Only Allow one edit box open at once, opening one closes the others
 - ``Allow clicking Edit Info to open/close the edit pop up box``
+
+- Handle Empty info submit (if value empty, use default)
+- Change Work Experience > Responsibilites to be a list format
+- Add Suitable SVGS for each Text Item
+- Add 'Add More Education'
+- Add 'Level of Education'
+- Add Protection against accidentally removing
+- Add Transition Animation for Edit Box Pop Up and Close
+- Adjust Position of Edit Box
+- Layout Cards in non vertical format
 
 
 
