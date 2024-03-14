@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 //TODO
 
 // Visual Stuff
-- Adjust CSS to look nicer
+- ``Adjust CSS to look nicer``
 - ``Collect CSS to single page``
 - ``!In Education info + Work Experience - change Started to be smaller than Finished!``
 - ``Change some Field Names (Eg Name:, Email:) to be an svg icon ``
@@ -41,10 +41,10 @@ Currently, two official plugins are available:
 - ``Add 'Level of Education'``
 - `` Add Protection against accidentally removing``
 - `` Add Transition Animation for Edit Box Pop Up and Close - Difficult since the pop up is render based rather than CSS handles``
-- Adjust Position of Edit Pop Up Box
+- ``Adjust Position of Edit Pop Up Box``
 - ``Layout Cards in non vertical format``
 - ``!! Too expensive - Add Click and Drag option for Edit Box``
-- Change to single column for responsive
+- ``Change to single column for responsive``
 
 
 

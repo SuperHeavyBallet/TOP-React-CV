@@ -16,7 +16,9 @@
   
   
 }
-
+*{
+/*  background-color: #7c7c7c;*/
+ }
 a {
   font-weight: 500;
   color: #646cff;
@@ -36,7 +38,7 @@ body {
 
   min-width: 320px;
   min-height: 100vh;
-  background-color: #7c7c7c;
+  
   padding: 1vh 2vw;
 }
 
@@ -89,6 +91,14 @@ button:focus-visible {
   margin: 0;
 }
 
+@media screen and (max-width: 650px){
+  .container{
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+}
+
 /* Columns */
 
 .column-1,
@@ -97,6 +107,8 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+
 
 }
 
@@ -120,6 +132,13 @@ button:focus-visible {
   margin: 1vh 1vw;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 5px;
+ 
+}
+
+@media screen and (max-width: 650px){
+  .info-card{
+    min-width: 250px;
+  }
   
 }
 
@@ -127,6 +146,7 @@ button:focus-visible {
 
   text-align: start;
   padding: 1vh 2vw;
+  background-color: whitesmoke;
 }
 
 .card-data-title-background{
@@ -143,6 +163,12 @@ button:focus-visible {
 .card-data-title-background h3{
   margin: 0;
   padding: 1vh;
+  background-color: var(--dark-blue);
+}
+
+.card-data-title-background svg{
+
+  background-color: var(--dark-blue);
 }
 
 .data-line{
@@ -151,34 +177,40 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: whitesmoke;
 }
 
 .data-line-icon{
   display: flex;
   height: 100%;
   flex-direction: column;
+  background-color: whitesmoke;
 
 }
 
 .data-line svg{
   min-width: 20px;
   padding-bottom: 0.3rem;
+  background-color: whitesmoke;
   
 }
 
 .data-text{
   line-height: normal;
+  background-color: whitesmoke;
 }
 .card-data p{
   
   min-width: 120px;
   margin: 0.5em;
   padding: 0;
+  background-color: whitesmoke;
 }
 
 .edit-button-container
 {
-  
+  background-color: whitesmoke;
+  border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -213,7 +245,14 @@ button:focus-visible {
 
 /*Pop Up Edit Box*/
 
+.edit-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .pop-up-form{
+
+  min-width: 280px;
   position: absolute;
   transform: translate(0px);
 
@@ -221,17 +260,28 @@ button:focus-visible {
   color: whitesmoke;
   margin: 1vh 1vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
+  border-radius: 6px;
 
 }
 
 .edit-form{
   text-align: start;
+  background-color: var(--dark-blue);
+  border-radius: 6px;
+}
+
+.edit-card-data{
+  text-align: start;
+  padding: 1vh 2vw;
+  background-color: var(--dark-blue);
 }
 
 .edit-header{
   margin: 0;
   padding: 0;
+  background-color: var(--dark-blue);
+  border-radius: 5px 5px 0 0;
+  
 }
 
 .edit-data-line{
@@ -240,7 +290,15 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   text-align: center;
+  background-color: var(--dark-blue);
   
+}
+.edit-data-line > div{
+  background-color: var(--dark-blue);
+}
+
+.edit-data-line input{
+  background-color: white;
 }
 
 input{
@@ -252,6 +310,8 @@ input{
   margin-top: 1vh;
   display: flex;
   flex-direction: row-reverse;
+  background-color: var(--dark-blue);
+  border-radius: 0 0 5px 5px;
 }
 
 .submit-button{
@@ -277,6 +337,8 @@ input{
 }
 
 .edit-form-top-bar h3{
+  background-color: whitesmoke;
+  border-radius: 5px 5px 0 0;
   margin: 0;
   padding: 0 0.5em;
 }

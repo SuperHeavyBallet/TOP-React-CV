@@ -97,50 +97,53 @@ export default function InfoCard()
     
     return (
         <div >
+             <div className="edit-container">
         { isFormVisible && (
-        <div id="drag-element" className="pop-up-form">
-            <form className="edit-form" onSubmit={handleSubmit}>
+           
+            <div id="drag-element" className="pop-up-form">
+                <form className="edit-form" onSubmit={handleSubmit}>
 
-                <div className="edit-form-top-bar">
-                    <h3>Edit Personal Info</h3>
-                    <div className="close-button-container">
-                    <button 
-                        className="close-button"
-                        type="button"
-                        onClick={handleCloseBox}>
-                            X
-                        </button>
+                    <div className="edit-form-top-bar">
+                        <h3>Edit Personal Info</h3>
+                        <div className="close-button-container">
+                        <button 
+                            className="close-button"
+                            type="button"
+                            onClick={handleCloseBox}>
+                                X
+                            </button>
 
-                    </div>
-                </div>            
-                <div className="card-data">
+                        </div>
+                    </div>            
+                    <div className="edit-card-data">
 
-                <div className="edit-header">First Name </div>
-                    <div className="edit-data-line">
-                        <Input value={firstName || ""} onInputChange={setFirstName}/>
-                    </div>
+                    <div className="edit-header">First Name </div>
+                        <div className="edit-data-line">
+                            <Input value={firstName || ""} onInputChange={setFirstName}/>
+                        </div>
 
-                <div className="edit-header">Last Name </div>
-                    <div className="edit-data-line">
-                        <Input value={lastName || ""} onInputChange={setLastName}/>
-                    </div>
+                    <div className="edit-header">Last Name </div>
+                        <div className="edit-data-line">
+                            <Input value={lastName || ""} onInputChange={setLastName}/>
+                        </div>
 
-                <div className="edit-header">Email </div>
-                    <div className="edit-data-line">
-                        <EmailInput value={email || ""} onInputChange={setEmail}/>
-                    </div>
+                    <div className="edit-header">Email </div>
+                        <div className="edit-data-line">
+                            <EmailInput value={email || ""} onInputChange={setEmail}/>
+                        </div>
 
-                <div className="edit-header">Phone </div>
-                    <div className="edit-data-line">
-                        <PhoneInput value={phone || ""} onInputChange={setPhone} placeholder="Phone (XXX) XXX-XXXX"/>
-                    </div>
+                    <div className="edit-header">Phone </div>
+                        <div className="edit-data-line">
+                            <PhoneInput value={phone || ""} onInputChange={setPhone} placeholder="Phone (XXX) XXX-XXXX"/>
+                        </div>
+                </div>
+                <div className="submit-button-container">
+                    <button className="submit-button" type="submit">Submit</button>
+                </div>
+                </form>
             </div>
-            <div className="submit-button-container">
-                <button className="submit-button" type="submit">Submit</button>
+            )}
             </div>
-            </form>
-        </div>
-        )}
 
         
         <div className="info-card">

@@ -72,58 +72,60 @@ export default function SchoolInfoCard( { removeCard })
 
     return (
         <div>
-            {isFormVisible && (
-                <div className="pop-up-form">
-                    <form  className="edit-form" onSubmit={handleSubmit}>
+             <div className="edit-container">
+                        {isFormVisible && (
+                            <div className="pop-up-form">
+                                <form  className="edit-form" onSubmit={handleSubmit}>
 
-                    <div className="edit-form-top-bar">
-                        <h3>Edit Education</h3>
-                        <div className="close-button-container">
-                            <button
-                                className="close-button"
-                                type="button"
-                                onClick={handleCloseBox}>X
-                            </button>
+                                <div className="edit-form-top-bar">
+                                    <h3>Edit Education</h3>
+                                    <div className="close-button-container">
+                                        <button
+                                            className="close-button"
+                                            type="button"
+                                            onClick={handleCloseBox}>X
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="edit-card-data">
+
+                                    <div className="edit-header">School Name</div>
+                                        <div className="edit-data-line">
+                                            < Input value={schoolName} onInputChange={setSchoolName}/>
+                                        </div>
+
+                                    <div className="edit-header">Title of Study</div>
+                                        <div className="edit-data-line">
+                                            < Input value={titleOfStudy} onInputChange={setTitleOfStudy}/> 
+                                        </div>
+
+                                    <div className="edit-header">Level of Study</div>
+                                        <div className="edit-data-line">
+                                            < Input value={levelOfStudy} onInputChange={setLevelOfStudy}/> 
+                                        </div>
+
+                                    <div className="edit-header">Started</div>
+                                        <div className="edit-data-line">    
+                                            < DateInput value={dateOfStudyStart} onInputChange={setDateOfStudyStart} /> 
+                                        </div>
+
+                                    <div className="edit-header">Finished</div>
+                                        <div className="edit-data-line">  
+                                            < DateInput value={dateOfStudyEnd} onInputChange={setDateOfStudyEnd}/> 
+                                        </div>
+                                    
+                                </div>
+                                
+                                
+                                <div className="submit-button-container">
+                                    <button className="submit-button" type="submit">Submit</button>
+                                </div>
+
+                                </form>
+                            </div>
+                        )}
                         </div>
-                    </div>
-
-                    <div className="card-data">
-
-                        <div className="edit-header">School Name</div>
-                            <div className="edit-data-line">
-                                < Input value={schoolName} onInputChange={setSchoolName}/>
-                            </div>
-
-                        <div className="edit-header">Title of Study</div>
-                            <div className="edit-data-line">
-                                < Input value={titleOfStudy} onInputChange={setTitleOfStudy}/> 
-                            </div>
-
-                        <div className="edit-header">Level of Study</div>
-                            <div className="edit-data-line">
-                                < Input value={levelOfStudy} onInputChange={setLevelOfStudy}/> 
-                            </div>
-
-                        <div className="edit-header">Started</div>
-                            <div className="edit-data-line">    
-                                < DateInput value={dateOfStudyStart} onInputChange={setDateOfStudyStart} /> 
-                            </div>
-
-                        <div className="edit-header">Finished</div>
-                            <div className="edit-data-line">  
-                                < DateInput value={dateOfStudyEnd} onInputChange={setDateOfStudyEnd}/> 
-                            </div>
-                        
-                    </div>
-                    
-                    
-                    <div className="submit-button-container">
-                        <button className="submit-button" type="submit">Submit</button>
-                    </div>
-
-                    </form>
-                </div>
-            )}
 
         <div className="info-card">
         <div className="card-data-title-background">

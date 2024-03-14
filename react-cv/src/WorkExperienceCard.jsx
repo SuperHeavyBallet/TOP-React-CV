@@ -73,58 +73,60 @@ export default function CompanyInfoCard({ removeCard })
 
     return (
         <div>
-            {isFormVisible && (
-                <div className="pop-up-form">
-                    
-                <form className="edit-form" onSubmit={handleSubmit}>
+             <div className="edit-container">
+                    {isFormVisible && (
+                        <div className="pop-up-form">
+                            
+                        <form className="edit-form" onSubmit={handleSubmit}>
 
-                <div className="edit-form-top-bar">
-                    <h3>Edit Work Experience</h3>
-                    <div className="close-button-container">
-                    <button
-                        className="close-button"
-                        type="button"
-                        onClick={handleCloseBox}>X
-                    </button>
+                        <div className="edit-form-top-bar">
+                            <h3>Edit Work Experience</h3>
+                            <div className="close-button-container">
+                            <button
+                                className="close-button"
+                                type="button"
+                                onClick={handleCloseBox}>X
+                            </button>
+                            </div>
+                        </div>
+
+                        <div className="edit-card-data">
+
+                        <div className="edit-header">Company Name </div>
+                            <div className="edit-data-line">
+                                <Input value={companyName} onInputChange={setCompanyName}/> 
+                            </div>
+
+                        <div className="edit-header">Position Title </div>
+                            <div className="edit-data-line">  
+                                <Input value={positionTitle} onInputChange={setPositionTitle}/> 
+                            </div>
+                            
+                        <div className="edit-header">Responsibilities </div>
+                            <div className="edit-data-line">      
+                                <Input value={responsibilities} onInputChange={setResponsibilities}/> 
+                            </div>
+                            
+                        <div className="edit-header">Started </div>
+                            <div className="edit-data-line">  
+                                < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} />
+                            </div>
+
+                        <div className="edit-header">Ended </div>
+                            <div className="edit-data-line"> 
+                                < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} />
+                            </div>
+
+                        </div>
+
+                            <div className="submit-button-container">
+                                <button className="submit-button" type="submit">Submit</button>
+                            </div>
+
+                            </form>
+                        </div>
+                    )}
                     </div>
-                </div>
-
-                <div className="card-data">
-
-                <div className="edit-header">Company Name </div>
-                    <div className="edit-data-line">
-                        <Input value={companyName} onInputChange={setCompanyName}/> 
-                    </div>
-
-                <div className="edit-header">Position Title </div>
-                    <div className="edit-data-line">  
-                        <Input value={positionTitle} onInputChange={setPositionTitle}/> 
-                    </div>
-                    
-                <div className="edit-header">Responsibilities </div>
-                    <div className="edit-data-line">      
-                        <Input value={responsibilities} onInputChange={setResponsibilities}/> 
-                    </div>
-                    
-                <div className="edit-header">Started </div>
-                    <div className="edit-data-line">  
-                        < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} />
-                    </div>
-
-                <div className="edit-header">Ended </div>
-                    <div className="edit-data-line"> 
-                        < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} />
-                    </div>
-
-                </div>
-
-                    <div className="submit-button-container">
-                        <button className="submit-button" type="submit">Submit</button>
-                    </div>
-
-                    </form>
-                </div>
-            )}
 
             <div className="info-card">
             <div className="card-data-title-background">
