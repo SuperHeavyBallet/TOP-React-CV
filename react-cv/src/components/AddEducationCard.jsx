@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import CompanyInfoCard from "./WorkExperienceCard";
-import SchoolInfoCard from "./SchoolInfoCard";
+import SchoolInfoCard from './SchoolInfoCard'
 
 export default function AddNewEducationCard()
 {

@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import Input from "./Input";
 import DateInput from "./DateInput";
-import TextAreaInput from "./TextAreaInput";
 
 export default function CompanyInfoCard({ removeCard })
 {
@@ -20,7 +19,7 @@ export default function CompanyInfoCard({ removeCard })
     const [ displayDateOfEmployment, setDisplayDateOfEmployment ] = useState("");
 
     const [ displayDateOfEmploymentStart, setDisplayDateOfEmploymentStart] = useState("Started...");
-    const [ displayDateOfEmploymentEnd, setDisplayDateOfEmploymentEnd ] = useState("Ended...");
+    const [ displayDateOfEmploymentEnd, setDisplayDateOfEmploymentEnd ] = useState("Finished...");
 
 
 
@@ -112,7 +111,7 @@ export default function CompanyInfoCard({ removeCard })
                                 < DateInput value={dateOfEmploymentStart} onInputChange={setDateOfEmploymentStart} />
                             </div>
 
-                        <div className="edit-header">Ended </div>
+                        <div className="edit-header">Finished </div>
                             <div className="edit-data-line"> 
                                 < DateInput value={dateOfEmploymentEnd} onInputChange={setDateOfEmploymentEnd} />
                             </div>
