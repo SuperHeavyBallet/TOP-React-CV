@@ -25,12 +25,26 @@ export default function SchoolInfoCard( { removeCard })
         
 
         event.preventDefault();
-        setDisplaySchoolName(schoolName);
-        setDisplayTitleOfStudy(titleOfStudy);
-        setDisplayLevelOfStudy(levelOfStudy);
-        setDisplayDateOfStudyStart(dateOfStudyStart);
-        setDisplayDateOfStudyEnd(dateOfStudyEnd);
-        setIsFormVisible(false);
+
+        if (schoolName != "" &&
+        titleOfStudy != "" &&
+        levelOfStudy != "" &&
+        dateOfStudyStart != "" &&
+        dateOfStudyEnd != "")
+        {
+            setDisplaySchoolName(schoolName);
+            setDisplayTitleOfStudy(titleOfStudy);
+            setDisplayLevelOfStudy(levelOfStudy);
+            setDisplayDateOfStudyStart(dateOfStudyStart);
+            setDisplayDateOfStudyEnd(dateOfStudyEnd);
+            setIsFormVisible(false);
+        }
+
+        else
+        {
+            window.alert("Please fill out ALL fields before submitting!")
+        }
+        
         
 
     }

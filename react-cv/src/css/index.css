@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --dark-blue: rgb(42, 48, 87); 
+  
+  
 }
 
 a {
@@ -27,9 +29,15 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
   min-width: 320px;
   min-height: 100vh;
+  background-color: #7c7c7c;
+  padding: 1vh 2vw;
 }
 
 h1 {
@@ -72,11 +80,36 @@ button:focus-visible {
 /* CV Container */
 
 .container{
-  background-color: #7c7c7c;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 100vw;
+  height: 100vh;
+  
   display: flex;
   flex-direction: row;
-  border-radius: 5px;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Columns */
+
+.column-1,
+.column-2,
+.column-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.column-2,
+.column-3{
+  padding-top: 2vh;
+}
+
+.add-button-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Info Card */
@@ -103,7 +136,7 @@ button:focus-visible {
   background-color: var(--dark-blue);
   border-radius: 5px 5px 0 0;
   color: whitesmoke;
-  margin: 0;
+  margin-bottom: 1vh;
   padding: 1vh 1vw;
 }
 
@@ -113,13 +146,32 @@ button:focus-visible {
 }
 
 .data-line{
-  margin: 0.7em 0.5em;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
-  line-height: 50%;
+  align-items: center;
+}
+
+.data-line-icon{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+}
+
+.data-line svg{
+  min-width: 20px;
+  padding-bottom: 0.3rem;
+  
+}
+
+.data-text{
+  line-height: normal;
 }
 .card-data p{
+  
+  min-width: 120px;
   margin: 0.5em;
   padding: 0;
 }
@@ -163,13 +215,14 @@ button:focus-visible {
 
 .pop-up-form{
   position: absolute;
-  transform: translate(-300px);
+  transform: translate(0px);
 
   background-color: var(--dark-blue);
   color: whitesmoke;
   margin: 1vh 1vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
+
 }
 
 .edit-form{

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { useRef } from "react";
 import Input from "./Input";
 import PhoneInput from "./PhoneInput";
 import EmailInput from "./EmailInput";
@@ -29,10 +30,39 @@ export default function InfoCard()
         
 
         event.preventDefault();
-        setDisplayName(firstName + " " + lastName);
-        setDisplayEmail(email);
-        setDisplayPhone(phone);
-        setIsFormVisible(false);
+
+        if (firstName != "" &&
+        lastName != "")
+        {
+            setDisplayName(firstName + " " + lastName);
+
+            if (email == "")
+            {
+                setDisplayEmail("Email@Address")
+            }
+            else
+            {
+                setDisplayEmail(email);
+            }
+
+            if (phone == "")
+            {
+                setDisplayPhone("(000) 000-0000");
+            }
+            else
+            {
+                setDisplayPhone(phone);
+            }
+            setIsFormVisible(false);
+        }
+        else
+        {
+            window.alert("Please Provide a First & Last Name.");
+        }
+        
+        
+        
+        
         
 
     }
@@ -57,10 +87,18 @@ export default function InfoCard()
 
     }
 
+    
+
+    
+    
+
+
+
+    
     return (
         <div >
         { isFormVisible && (
-        <div className="pop-up-form">
+        <div id="drag-element" className="pop-up-form">
             <form className="edit-form" onSubmit={handleSubmit}>
 
                 <div className="edit-form-top-bar">

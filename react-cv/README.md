@@ -15,7 +15,7 @@ Currently, two official plugins are available:
 - ``!In Education info + Work Experience - change Started to be smaller than Finished!``
 - ``Change some Field Names (Eg Name:, Email:) to be an svg icon ``
 - ``Correct Edit > Clear buttons``
-- Adjust Add Buttons to uniform width
+- ``Adjust Add Buttons to uniform width``
 
 // Functional Stuff
 - ``Maintain input value in edit input fields``
@@ -33,10 +33,9 @@ Currently, two official plugins are available:
 - Only Allow one edit box open at once, opening one closes the others
 - ``Allow clicking Edit Info to open/close the edit pop up box``
 
-- Handle Empty info submit (if value empty, use default)
-- Change Work Experience > Responsibilites to be a list format
-- Responsibilites lin should wrap after a point
-- Add 'Add more' to responsibilities
+- ``Handle Empty info submit (if value empty, use default)``
+- `` Responsibilites lin should wrap after a point``
+- ``! Too Expensive - Add 'Add more' to responsibilities``
 - ``Add Suitable SVGS for each Text Item``
 - ``Add 'Add More Education'``
 - ``Add 'Level of Education'``
@@ -44,7 +43,7 @@ Currently, two official plugins are available:
 - `` Add Transition Animation for Edit Box Pop Up and Close - Difficult since the pop up is render based rather than CSS handles``
 - Adjust Position of Edit Pop Up Box
 - ``Layout Cards in non vertical format``
-- Add Click and Drag option for Edit Box
+- ``!! Too expensive - Add Click and Drag option for Edit Box``
 - Change to single column for responsive
 
 

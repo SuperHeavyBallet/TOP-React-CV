@@ -35,7 +35,7 @@ export default function AddNewCard()
     
 
     return (
-        <div>
+        <div className="add-button-container">
             {cards.map(card => (
                 <CompanyInfoCard
                 key={card.id}

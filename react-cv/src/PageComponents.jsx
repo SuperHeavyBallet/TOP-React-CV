@@ -17,7 +17,7 @@ export default function PageComponents()
                 <AddNewEducationCard />
             </div>
             
-            <div className='column-2'>
+            <div className='column-3'>
                 <AddNewCard />
             </div>
             

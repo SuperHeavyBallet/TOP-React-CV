@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './css/index.css'
-import './css/App.css'
+
 import InfoCard from './InfoCard.jsx'
 import SchoolInfoCard from './SchoolInfoCard.jsx'
 import CompanyInfoCard from './WorkExperienceCard.jsx'

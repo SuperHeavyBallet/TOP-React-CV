@@ -29,7 +29,7 @@ export default function AddNewEducationCard()
     }
 
     return (
-        <div>
+        <div className="add-button-container">
             {cards.map(card => (
                 <SchoolInfoCard
                     key={card.id}

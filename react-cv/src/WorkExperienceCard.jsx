@@ -29,12 +29,26 @@ export default function CompanyInfoCard({ removeCard })
     function handleSubmit(event)
     {
         event.preventDefault();
-        setDisplayCompanyName(companyName);
-        setDisplayPositionTitle([positionTitle]);
-        setDisplayResponsibilities(responsibilities);
-        setDisplayDateOfEmploymentStart(dateOfEmploymentStart);
-        setDisplayDateOfEmploymentEnd(dateOfEmploymentEnd)
-        setIsFormVisible(false);
+
+        if (displayCompanyName != "" &&
+        displayPositionTitle != "" &&
+        displayResponsibilities != "" &&
+        dateOfEmploymentStart != "" &&
+        dateOfEmploymentEnd != "")
+        {
+
+        
+            setDisplayCompanyName(companyName);
+            setDisplayPositionTitle([positionTitle]);
+            setDisplayResponsibilities(responsibilities);
+            setDisplayDateOfEmploymentStart(dateOfEmploymentStart);
+            setDisplayDateOfEmploymentEnd(dateOfEmploymentEnd)
+            setIsFormVisible(false);
+        }
+        else
+        {
+            window.alert("Please fill out ALL fields before submitting!")
+        }
     }
 
     function handleCloseBox()
@@ -54,10 +68,6 @@ export default function CompanyInfoCard({ removeCard })
         }
     }
 
-    function handleRemoveClick()
-    {
-        
-    }
 
 
 
@@ -140,7 +150,7 @@ export default function CompanyInfoCard({ removeCard })
                         <line x1="9" y1="3" x2="9" y2="9"></line>
                         <line x1="15" y1="3" x2="15" y2="9"></line>
                     </svg>
-                    <p>{displayCompanyName}</p>
+                    <p className="data-text">{displayCompanyName}</p>
                 </div>
 
                 <div className="data-line">
@@ -150,16 +160,18 @@ export default function CompanyInfoCard({ removeCard })
                         <line x1="12" y1="15" x2="12" y2="22"></line>
                         <line x1="9" y1="19" x2="15" y2="19"></line>
                         </svg>
-                    <p>{displayPositionTitle}</p>
+                    <p className="data-text">{displayPositionTitle}</p>
                 </div>
 
                 <div className="data-line">
+                    <div className="data-line-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                         <path d="M9 11l3 3L22 4"></path>
                         <path d="M9 17l3 3L22 10"></path>
                         </svg>
-                    <p>{displayResponsibilities}</p>
+                        </div>
+                    <p className="data-text">{displayResponsibilities}</p>
                 </div>
 
                 <div className="data-line">
@@ -170,7 +182,7 @@ export default function CompanyInfoCard({ removeCard })
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                         
                         </svg>
-                    <p>{displayDateOfEmploymentStart}</p>
+                    <p className="data-text">{displayDateOfEmploymentStart}</p>
                 </div>
 
                 <div className="data-line">
@@ -183,7 +195,7 @@ export default function CompanyInfoCard({ removeCard })
                         <line x1="8" y1="15" x2="10" y2="18"></line>
                         <line x1="16" y1="13" x2="10" y2="18"></line>
                         </svg>
-                    <p>{displayDateOfEmploymentEnd}</p>
+                    <p className="data-text">{displayDateOfEmploymentEnd}</p>
                 </div>
 
                 </div>
