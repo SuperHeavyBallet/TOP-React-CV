@@ -20,7 +20,12 @@ export default function AddNewEducationCard()
 
     function handleRemoveCard(id)
     {
-        setCards(cards.filter(card => card.id !== id));
+        const isConfirmed = window.confirm("Are you sure you want to remove this item?");
+
+        if (isConfirmed)
+        {
+            setCards(cards.filter(card => card.id !== id));
+        }
     }
 
     return (

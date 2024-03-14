@@ -30,7 +30,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: gray;
 }
 
 h1 {
@@ -70,6 +69,16 @@ button:focus-visible {
   }
 }
 
+/* CV Container */
+
+.container{
+  background-color: #7c7c7c;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
 /* Info Card */
 
 .info-card
@@ -88,11 +97,14 @@ button:focus-visible {
 }
 
 .card-data-title-background{
+  display: flex;
+  justify-content: space-between;
+  line-height: 50%;
   background-color: var(--dark-blue);
   border-radius: 5px 5px 0 0;
   color: whitesmoke;
   margin: 0;
-  padding: 0;
+  padding: 1vh 1vw;
 }
 
 .card-data-title-background h3{

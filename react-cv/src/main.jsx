@@ -9,17 +9,15 @@ import "./css/BoxOutline.css";
 import './css/Form.css'
 import AddNewCard from './AddWorkExperienceCard.jsx'
 import AddNewEducationCard from './AddEducationCard.jsx'
+import PageComponents from './PageComponents.jsx'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <InfoCard />
+    <PageComponents />
 
-    <AddNewEducationCard/>
-
-   
-    <AddNewCard/>
+    
 
     
     

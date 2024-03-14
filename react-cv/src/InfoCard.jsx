@@ -106,7 +106,18 @@ export default function InfoCard()
 
         
         <div className="info-card">
-            <div className="card-data-title-background"><h3>Personal Info</h3></div>
+            <div className="card-data-title-background">
+                <h3>Personal Info</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                        <line x1="4" y1="8" x2="20" y2="8"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="16" x2="20" y2="16"></line>
+                        <path d="M8 2v4"></path>
+                        <path d="M12 2v4"></path>
+                        <path d="M16 2v4"></path>
+                        </svg>
+                </div>
             <div className="card-data">
                 <div className="data-line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">

@@ -11,10 +11,11 @@ Currently, two official plugins are available:
 
 // Visual Stuff
 - Adjust CSS to look nicer
-- Collect CSS to single page
-- In Education info + Work Experience - change Started to be smaller than Finished
-- Change some Field Names (Eg Name:, Email:) to be an svg icon 
-- Correct Edit > Clear buttons
+- ``Collect CSS to single page``
+- ``!In Education info + Work Experience - change Started to be smaller than Finished!``
+- ``Change some Field Names (Eg Name:, Email:) to be an svg icon ``
+- ``Correct Edit > Clear buttons``
+- Adjust Add Buttons to uniform width
 
 // Functional Stuff
 - ``Maintain input value in edit input fields``
@@ -25,7 +26,7 @@ Currently, two official plugins are available:
 
 - ``adjust date of study to date started + date ended``
 
-- ``!!adjust Responsibilities to text box, not single line!!`` - Possible issue with display version being single line, not text area - may be a CSS issue
+- ``!!adjust Responsibilities to text box, not single line!!`` - ``Possible issue with display version being single line, not text area - may be a CSS issue``
 - ``adjust date of Employment to date started + date ended``
 
 
@@ -34,13 +35,17 @@ Currently, two official plugins are available:
 
 - Handle Empty info submit (if value empty, use default)
 - Change Work Experience > Responsibilites to be a list format
-- Add Suitable SVGS for each Text Item
-- Add 'Add More Education'
-- Add 'Level of Education'
-- Add Protection against accidentally removing
-- Add Transition Animation for Edit Box Pop Up and Close
-- Adjust Position of Edit Box
-- Layout Cards in non vertical format
+- Responsibilites lin should wrap after a point
+- Add 'Add more' to responsibilities
+- ``Add Suitable SVGS for each Text Item``
+- ``Add 'Add More Education'``
+- ``Add 'Level of Education'``
+- `` Add Protection against accidentally removing``
+- `` Add Transition Animation for Edit Box Pop Up and Close - Difficult since the pop up is render based rather than CSS handles``
+- Adjust Position of Edit Pop Up Box
+- ``Layout Cards in non vertical format``
+- Add Click and Drag option for Edit Box
+- Change to single column for responsive
 
 
 
